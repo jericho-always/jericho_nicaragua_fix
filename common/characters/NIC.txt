@@ -9,6 +9,7 @@ characters={
 		country_leader={
 			ideology=liberalism
 			expire="1965.1.1"
+			traits = { unpopular2 }
 			id=-1
 		}
 	}
@@ -61,7 +62,7 @@ characters={
 	}
 
 	NIC_mario_flores_ortiz={
-		name="Dr. Mario Flores Ortiz"
+		name="Mario Flores Ortiz"
 		portraits={
 			civilian={
 				large="gfx/leaders/NIC/r56_portrait_NIC_Dr._Mario_Flores_Ortiz.dds"
@@ -95,10 +96,15 @@ characters={
 				small = GFX_Portrait_South_America_Generic_land_3_small
 			}
 		}
-		country_leader={
-			ideology=falangism
-			expire = "1965.1.1"
-			id=-1
+		advisor={
+			slot = political_advisor
+			idea_token = NIC_luis_alberto_cabrales
+			allowed  = {
+				original_tag  = NIC
+			}
+			traits  = {
+				fascist_demagogue 
+			}
 		}
 	}
 
@@ -635,7 +641,7 @@ characters={
 		}
 	}
 
-	NIC_Lorenzo_Guerrero={
+	NIC_Lorenzo_Guerrero={ # Minister of Education 1934-1937
 		name = NIC_lorenzo_guerrero
 		portraits={
 			army={
@@ -652,7 +658,7 @@ characters={
 				has_country_flag = NIC_somoza_in_power
 			}
 			traits  = {
-				ideological_groupie 
+				minister_of_education
 			}
 		}
 	}
@@ -675,4 +681,31 @@ characters={
 			}
 		}
 	}
+
+	NIC_jose_coronel_urtecho={
+		name="José Coronel Urtecho"
+		portraits={
+			army={
+				small=GFX_idea_generic_political_advisor_south_america_1
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire = "1965.1.1"
+			traits = { fascist_writer }
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NIC_Jose_Coronel_Urtecho
+			allowed  = {
+				original_tag  = NIC
+			}
+			traits  = {
+				# placeholder
+				fascist_writer 
+			}
+		}
+	}
+
 }

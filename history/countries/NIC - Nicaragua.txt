@@ -13,6 +13,7 @@ set_technology = {
 	gw_artillery = 1
 	tech_military_police = 1
 	tech_trucks = 1
+	basic_train = 1
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -64,6 +65,7 @@ recruit_character = NIC_salvador_guerrero_montalvan
 recruit_character = NIC_constantino_herdocia_y_yteran
 recruit_character = NIC_emilio_alvarez_lejarza
 recruit_character = NIC_adolfo_diaz_recinos
+recruit_character = NIC_jose_coronel_urtecho
 
 set_stability = 0.45
 set_war_support = 0.2
