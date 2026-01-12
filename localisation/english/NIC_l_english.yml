@@ -60,7 +60,7 @@ NIC_marine_national_guard_cooperation:0 "Marine-Guardia Nacional Cooperation"
 NIC_dock_access:0 "§YWe will give the USA docking rights§! \n"
 NIC_remove_ideatt:0 "§YIf the National Spirit is Present:§! \n"
 #Flags
-NIC_pedro_altamirano_assassination_flag:0 "§WPedro Altamirano has been §Rassassinated.§!"
+NIC_pedro_altamirano_assassination_flag:0 "§YPedro Altamirano§! has been §Rassassinated.§!"
 
 #NIC_Somoza_is_running:0 "§YSomoza has Announced his Intent to Run as President§!" #(not being used)
 #Ideas
@@ -155,6 +155,8 @@ NIC_banco_nacional_de_nicaragua:0 "Banco Nacional"
 NIC_banco_nacional_de_nicaragua_desc:0 "The Banco Nacional de Nicaragua is a privatized central bank purchased by our government in 1924. It operates as a concession of the Brown Brothers & Company Bank of New York, with our government as a major shareholder."
 NIC_tropical_radio_telegraph:0 "Tropical Radio"
 NIC_tropical_radio_telegraph_desc:0 "The Tropical Radio Telegraph Company is a subsidiary of the United Fruit Company, expanding its already powerful influence over their namesake "banana republics" of Central America."
+NIC_radio_gn:0 "Radio G.N."
+NIC_radio_gn_desc:0 "Radio Guardia Nacional started as a military communication radio but is increasingly becoming a tool for Anastasio Somoza García's consolidation of power."
 
 #Traits
 unpopular2:0 "Unpopular"

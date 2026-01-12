@@ -88,7 +88,7 @@ characters={
 		field_marshal = {
 			traits = { trait_cautious harsh_leader inspirational_leader politically_connected }
 			skill = 3
-			attack_skill = 3
+			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 3
@@ -175,10 +175,10 @@ characters={
 		corps_commander = {
 			traits = { politically_connected trait_reckless trickster  }
 			skill = 2
-			attack_skill = 4
+			attack_skill = 3
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -199,6 +199,7 @@ characters={
 			}
 			available = {
 				NOT = { has_government = communism }
+				NOT = { has_idea = NIC_gustavo_abaunza_torrealba_chief }
 			}
 			traits = {
 				army_regrouping_2
@@ -216,6 +217,7 @@ characters={
 			}
 			available = {
 				has_country_leader = { ruling_only = yes character = NIC_anastasio_somoza_garcía }
+				NOT = { has_idea = NIC_gustavo_abaunza_torrealba_high_command }
 			}
 			traits = {
 				army_chief_planning_2
@@ -421,6 +423,85 @@ characters={
 			}
 			traits = {
 				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	# https://es.wikipedia.org/wiki/Santos_L%C3%B3pez
+	NIC_jose_santo_lopez = { 
+		name = "Santo Lopez"
+		portraits={
+			army = {
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_jose_santo_lopez
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				# placeholder?
+				army_concealment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	# https://cuadernosandinista.com/2024/10/18/general-ramon-raudales-precursor-del-movimiento-guerrillero-revolucinario/
+	NIC_ramon_radules = { 
+		name = "Ramón Raudales"
+		portraits={
+			army = {
+				small="GFX_idea_generic_army_south_america_5"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_jose_santo_lopez
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				PRC_guerilla_fighter
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	# per this article https://www.nytimes.com/1942/11/12/archives/nicaragua-uses-seized-radio.html
+	NIC_jose_garcia = { 
+		name = "José Garcia"
+		portraits={
+			army = {
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_jose_garcia
+			allowed = {
+				original_tag = NIC
+			}
+			traits = {
+				army_radio_intelligence_1
 			}
 			cost = 100
 			ai_will_do = {

@@ -50,6 +50,7 @@ recruit_character = NIC_gustavo_flores_mendienta
 recruit_character = NIC_francisco_parajon_montealegre
 recruit_character = NIC_gustavo_abaunza_torrealba
 recruit_character = NIC_samuel_santos
+recruit_character = NIC_jose_garcia
 # theorists
 recruit_character = NIC_victor_roman_y_reyes
 recruit_character = NIC_toribio_fermin
@@ -67,6 +68,8 @@ recruit_character = NIC_emilio_alvarez_lejarza
 recruit_character = NIC_adolfo_diaz_recinos
 # political advisors - communist / anti-somocista
 recruit_character = NIC_pedro_altamirano
+recruit_character = NIC_jose_santo_lopez
+recruit_character = NIC_ramon_radules
 recruit_character = NIC_concepcion_palacios
 # political advisor - any / not sure yet
 recruit_character = NIC_vicente_guadra_gomez

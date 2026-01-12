@@ -354,7 +354,7 @@ ideas = {
 		}
 
 		NIC_tropical_radio_telegraph = {
-			picture = generic_radio_concern
+			picture = generic_electronics_concern_3
 			allowed = {
 				original_tag = NIC
 			}
@@ -369,6 +369,30 @@ ideas = {
 			}
 			
 			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NIC_radio_gn = {
+			picture = generic_radio_concern
+			allowed = {
+				original_tag = NIC
+			}
+
+			# going to be swapped to radio sandino via focus
+			available = {
+				OR = {
+					has_idea = NIC_anastasio_somoza_garcía_advisor
+					has_country_leader = {
+					ruling_only = yes
+					character = NIC_anastasio_somoza_garcía
+					}
+				}
+			}
+			
+			traits = { propaganda_agency }
 			
 			ai_will_do = {
 				factor = 1
