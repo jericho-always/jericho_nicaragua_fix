@@ -140,6 +140,7 @@ NIC_Dr_Mario_Flores_Ortiz:0 "Mario Flores Ortiz"
 NIC_Francisco_Navarro:0 "Francisco Navarro Alvarado"
 NIC_lorenzo_guerrero:0 "Lorenzo Guerrero"
 NIC_enoc_aguado:0 "Enoc Aguado"
+NIC_benjamin_lacayo_sacasa_desc:0 "Benjamin Lacayo Sacasa"
 NIC_concepcion_palacios:0 "Concepción Palacios"
 NIC_vicente_guadra_gomez:0 "Vicente Cuadra Gomez"
 NIC_salvador_guerrero_montalvan:0 "Salvador Guerrero Montalván"
@@ -148,10 +149,17 @@ NIC_constantino_herdocia_y_yteran_desc:0 "Constantino Herdocia y Terán"
 NIC_emilio_alvarez_lejarza:0 "Emilio Álvarez Lejarza"
 NIC_adolfo_diaz_recinos:0 "Adolfo Díaz Recinos"
 #Companies
+NIC_NYHRMC:0 "Rosario Mining"
+NIC_NYHRMC_desc:0 "The New York and Honduras Rosario Mining Company is a powerful American mining conglomerate with ties to gold and silver mines throughout Central America."
+NIC_banco_nacional_de_nicaragua:0 "Banco Nacional"
+NIC_banco_nacional_de_nicaragua_desc:0 "The Banco Nacional de Nicaragua is a privatized central bank purchased by our government in 1924. It operates as a concession of the Brown Brothers & Company Bank of New York, with our government as a major shareholder."
+NIC_tropical_radio_telegraph:0 "Tropical Radio"
+NIC_tropical_radio_telegraph_desc:0 "The Tropical Radio Telegraph Company is a subsidiary of the United Fruit Company, expanding its already powerful influence over their namesake "banana republics" of Central America."
 
 #Traits
 unpopular2:0 "Unpopular"
 defeater_of_the_bandits:0 "Victor over the Bandits"
 NIC_vice_president:0 "Vice President"
+NIC_head_of_guardia_nacional:0 "Military Patriarch"
 #Misc
 

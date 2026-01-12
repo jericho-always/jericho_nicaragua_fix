@@ -629,6 +629,7 @@ leader_traits = {
 		}							
 	}	
 
+###------> NIC <><> <><> <><> <><> <><>
 
 	defeater_of_the_bandits = {
 		random = no
@@ -644,6 +645,16 @@ leader_traits = {
 		production_speed_buildings_factor = 0.02
 		industrial_concern_cost_factor = -0.05
 	}
+
+	NIC_head_of_guardia_nacional = {
+		sprite = 5
+		random = no
+		democratic_drift = -0.05
+		training_time_army_factor = -0.075
+		experience_gain_army = 0.25
+
+	}	
+
 	corrupt = {
 		sprite = 10
 		random = yes

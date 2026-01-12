@@ -80,7 +80,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				democratic_drift = 0.05
+				industry_free_repair_factor = 0.1
       			resistance_damage_to_garrison = -0.1
 			}
 		}
@@ -306,4 +306,75 @@ ideas = {
 			}
 		}
 	}
+
+	# industrial concerns
+	industrial_concern = {
+
+		NIC_NYHRMC = {
+			picture = HON_rmc	
+			allowed = {
+				original_tag = NIC
+			}
+
+			available = {
+				NOT = { has_war_with = USA }
+			}
+			
+			research_bonus = {
+				construction_tech = 0.2
+			}
+
+			modifier = {
+				local_resources_factor = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NIC_banco_nacional_de_nicaragua = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			allowed = {
+				original_tag = NIC
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				trade_opinion_factor = 0.15
+			}
+			
+			traits = { central_bank }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NIC_tropical_radio_telegraph = {
+			picture = generic_radio_concern
+			allowed = {
+				original_tag = NIC
+			}
+
+			# placeholder -- will eventually check for peace w/ Zemurray as HON leader + still being a banana republic.
+			available = {
+				NOT = { has_war_with = USA }
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+	}	
+	# end
 }

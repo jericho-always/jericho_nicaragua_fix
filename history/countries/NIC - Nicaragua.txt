@@ -79,13 +79,13 @@ add_ideas = {
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1933.12.8"
+	last_election = "1932.11.6"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 set_popularities = {
 	democratic = 42
-	fascism = 18
-	communism = 4
-	neutrality = 36
+	fascism = 12
+	communism = 8
+	neutrality = 38
 }

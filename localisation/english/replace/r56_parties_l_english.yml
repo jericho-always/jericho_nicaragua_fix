@@ -869,8 +869,8 @@
  NIC_democratic_party_long:0 "Partido Liberal"
  NIC_communism_party:0 "PSN"
  NIC_communism_party_long:0 "Partido Socialista Nicaragüense"
- NIC_fascism_party:0 "PLN-F"
- NIC_fascism_party_long:0 "Partido Liberal Nacionalista - Fascistas"
+ NIC_fascism_party:0 "MV"
+ NIC_fascism_party_long:0 "Movimiento Vanguardista"
 
  #NIR
  NIR_neutrality_party:0 "UUP"

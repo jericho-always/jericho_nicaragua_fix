@@ -14,6 +14,38 @@ characters={
 		}
 	}
 
+	
+	NIC_carlos_brenes_jarquin={
+		name="Carlos Alberto Brenes"
+		portraits={
+			civilian={
+				large="gfx/leaders/NIC/r56_Portrait_NIC_Carlos_Alberto_Brenes.dds"
+			}
+			army={
+				small=GFX_idea_nic_jarquin
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1"
+			traits = {  }
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NIC_carlos_brenes_jarquin
+			allowed  = {
+				original_tag  = NIC
+			}
+			traits  = {
+				silent_workhorse 
+			}
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
 	NIC_anastasio_somoza_garcía={
 		name="Anastasio Somoza García"
 		portraits={
@@ -39,11 +71,14 @@ characters={
 			}
 			available = {
 				NOT = {
-					has_country_flag = NIC_somoza_in_power
+					has_country_leader = {
+					ruling_only = yes
+					character = NIC_anastasio_somoza_garcía
+					}	
 				}
 			}
 			traits = {
-				army_chief_organizational_2
+				NIC_head_of_guardia_nacional
 			}
 			cost = 75
 			ai_will_do = {
@@ -51,7 +86,7 @@ characters={
 			}
 		}
 		field_marshal = {
-			traits = { infantry_officer politically_connected }
+			traits = { trait_cautious infantry_officer politically_connected }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -407,7 +442,7 @@ characters={
 	}
 
 	NIC_benjamin_lacayo_sacasa={
-		name="Benjamin Lacayo Sacasa"
+		name="Benjamin Lacayo"
 		portraits={
 			army={
 				small="gfx/interface/ideas/generic/kr_advisors/kr_advisor_south_america_generic_9.dds"
@@ -580,27 +615,6 @@ characters={
 		}
 	}
 
-	NIC_carlos_brenes_jarquin={
-		name="Carlos Brenes Jarquin"
-		portraits={
-			army={
-				small=GFX_idea_nic_jarquin
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NIC_carlos_brenes_jarquin
-			allowed  = {
-				original_tag  = NIC
-			}
-			traits  = {
-				silent_workhorse 
-			}
-			ai_will_do = {
-				factor = 4
-			}
-		}
-	}
 
 	NIC_francisco_parajon_montealegre = { #Terrible photo, you can always trust SA for that
 		name = "Francisco Parajón Montealegre"
@@ -633,7 +647,10 @@ characters={
 				original_tag  = NIC
 			}
 			available = {
-				has_country_flag = NIC_somoza_in_power
+				has_country_leader = {
+					ruling_only = yes
+					character = NIC_anastasio_somoza_garcía
+				}	
 			}
 			traits  = {
 				NIC_vice_president 
@@ -655,7 +672,10 @@ characters={
 				original_tag  = NIC
 			}
 			available = {
-				has_country_flag = NIC_somoza_in_power
+				has_country_leader = {
+					ruling_only = yes
+					character = NIC_anastasio_somoza_garcía
+				}	
 			}
 			traits  = {
 				minister_of_education
