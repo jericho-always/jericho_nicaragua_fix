@@ -33,39 +33,53 @@ if = {
 
 set_country_flag = monroe_doctrine
 set_country_flag = hispanic
-
+# country leaders
 recruit_character = NIC_juan_bautista_sacasa
-recruit_character = NIC_anastasio_somoza_garcía
-recruit_character = NIC_mario_flores_ortiz
-recruit_character = NIC_luis_alberto_cabrales
-recruit_character = NIC_joel_garcia_zaldana
-recruit_character = NIC_toribio_fermin
-recruit_character = NIC_augusto_caraval_antonio
-recruit_character = NIC_guillermo_r_cuadra
-recruit_character = NIC_bernardo_doroteo
-recruit_character = NIC_manuel_roque_garcia
-recruit_character = NIC_sebastian_morazan
-recruit_character = NIC_gustavo_flores_mendienta
-recruit_character = NIC_juan_pablo_esquerra
-recruit_character = NIC_noel_esto_nino_miranda
-recruit_character = NIC_maximiliano_benito
-recruit_character = NIC_victor_roman_y_reyes
-recruit_character = NIC_manuel_corovel_kirsch
-recruit_character = NIC_benjamin_lacayo_sacasa
-#recruit_character = NIC_leonardo_arguello_vargas #not real
 recruit_character = NIC_carlos_brenes_jarquin
+recruit_character = NIC_mario_flores_ortiz
+recruit_character = NIC_jose_coronel_urtecho
+recruit_character = NIC_anastasio_somoza_garcía
+# army chief - in other roles
+# air chief
+recruit_character = NIC_joel_garcia_zaldana
+recruit_character = NIC_guillermo_r_cuadra
+# navy chief 
+recruit_character = NIC_noel_esto_nino_miranda
+recruit_character = NIC_gustavo_flores_mendienta
+# high command
 recruit_character = NIC_francisco_parajon_montealegre
-recruit_character = NIC_Francisco_Navarro
+recruit_character = NIC_gustavo_abaunza_torrealba
+recruit_character = NIC_samuel_santos
+# theorists
+recruit_character = NIC_victor_roman_y_reyes
+recruit_character = NIC_toribio_fermin
+recruit_character = NIC_sebastian_morazan
+# political advisors - somocista / liberals
 recruit_character = NIC_Lorenzo_Guerrero
-recruit_character = NIC_Emiliano_Chamorro_Vargas
-recruit_character = NIC_enoc_aguado
-recruit_character = NIC_concepcion_palacios
-recruit_character = NIC_vicente_guadra_gomez
+recruit_character = NIC_Francisco_Navarro
 recruit_character = NIC_salvador_guerrero_montalvan
-recruit_character = NIC_constantino_herdocia_y_yteran
+recruit_character = NIC_luis_alberto_cabrales
+recruit_character = NIC_benjamin_lacayo_sacasa
+recruit_character = NIC_enoc_aguado
+# political advisors - conservatives
+recruit_character = NIC_Emiliano_Chamorro_Vargas
 recruit_character = NIC_emilio_alvarez_lejarza
 recruit_character = NIC_adolfo_diaz_recinos
-recruit_character = NIC_jose_coronel_urtecho
+# political advisors - communist / anti-somocista
+recruit_character = NIC_pedro_altamirano
+recruit_character = NIC_concepcion_palacios
+# political advisor - any / not sure yet
+recruit_character = NIC_vicente_guadra_gomez
+recruit_character = NIC_constantino_herdocia_y_yteran
+
+#note: these characters were removed from the base game NIC characters for being fictious/not relevent. they were also cut from common -> characters -> NIC.txt to save space. they are here to keep track of what was removed.
+#recruit_character = NIC_maximiliano_benito # was army theorist
+#recruit_character = NIC_manuel_corovel_kirsch # was army armored 2
+#recruit_character = NIC_leonardo_arguello_vargas # was armaments organizer
+#recruit_character = NIC_manuel_roque_garcia # was army regrouping 2
+#recruit_character = NIC_juan_pablo_esquerra # was naval air defense 2
+#recruit_character = NIC_bernardo_doroteo # was close air support 2
+#recruit_character = NIC_augusto_caraval_antonio # was army chief defense 2
 
 set_stability = 0.45
 set_war_support = 0.2

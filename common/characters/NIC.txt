@@ -1,4 +1,5 @@
 characters={
+	# country leaders
 	NIC_juan_bautista_sacasa={
 		name="Juan Bautista Sacasa"
 		portraits={
@@ -14,7 +15,6 @@ characters={
 		}
 	}
 
-	
 	NIC_carlos_brenes_jarquin={
 		name="Carlos Alberto Brenes"
 		portraits={
@@ -86,11 +86,11 @@ characters={
 			}
 		}
 		field_marshal = {
-			traits = { trait_cautious infantry_officer politically_connected }
+			traits = { trait_cautious harsh_leader inspirational_leader politically_connected }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
-			planning_skill = 2
+			planning_skill = 4
 			logistics_skill = 3
 			legacy_id = 12000
 		}
@@ -122,29 +122,123 @@ characters={
 			}
 		}
 	}
-
-	NIC_luis_alberto_cabrales={ #Creator of the blue-shirts
-		name = "Luis Alberto Cabrales"
+	
+	NIC_jose_coronel_urtecho={
+		name="José Coronel Urtecho"
 		portraits={
-			civilian={
-				large = GFX_Portrait_South_America_Generic_land_3
-				small = GFX_Portrait_South_America_Generic_land_3_small
+			army={
+				small=GFX_idea_generic_political_advisor_south_america_1
 			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire = "1965.1.1"
+			traits = { fascist_writer }
+			id=-1
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = NIC_luis_alberto_cabrales
+			idea_token = NIC_Jose_Coronel_Urtecho
 			allowed  = {
 				original_tag  = NIC
 			}
 			traits  = {
-				fascist_demagogue 
+				# placeholder
+				fascist_writer 
 			}
 		}
 	}
 
+	# generals 
+	NIC_francisco_parajon_montealegre = { #Terrible photo, you can always trust SA for that
+		name = "Francisco Parajón Montealegre"
+		portraits={
+			army = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_francisco_parajon_montealegre_high_command
+			allowed = {
+				original_tag = NIC
+			}
+			traits = {
+				army_infantry_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected trait_reckless trickster  }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	# Gustavo Abaunza Torrealba (1875-1949), Somoza Garcia's chief of staff and one of Sandino's assassins. Selser pg. 229. 
+	NIC_gustavo_abaunza_torrealba = { 
+		name = "Gustavo Abaunza"
+		portraits={
+			army = {
+				large = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_gustavo_abaunza_torrealba_high_command
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				NOT = { has_government = communism }
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = NIC_gustavo_abaunza_torrealba_chief
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				has_country_leader = { ruling_only = yes character = NIC_anastasio_somoza_garcía }
+			}
+			traits = {
+				army_chief_planning_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected thorough_planner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	# air chief https://www.laahs.com/nicaraguan-air-force/
+	# Juan Garcia Zaldena is called "Joel" in the character files. Kept to avoid issue. 
 	NIC_joel_garcia_zaldana={
-		name="Joel Garcia Zaldana"
+		name="Juan Garcia Zaldana"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_south_america_1"
@@ -152,56 +246,12 @@ characters={
 		}
 		advisor={
 			slot = air_chief
-			idea_token = NIC_joel_garcia_zaldana
+			idea_token = NIC_joel_garcia_zaldana_chief
 			allowed = {
 				original_tag = NIC
 			}
 			traits = {
 				air_chief_ground_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	NIC_toribio_fermin={
-		name="Toribio Fermín"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_south_america_1"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = NIC_toribio_fermin
-			ledger = navy
-			allowed = {
-				original_tag = NIC
-			}
-			traits = {
-				naval_theorist
-			}
-		}
-	}
-
-	NIC_augusto_caraval_antonio={
-		name="Augusto Caraval Antonio"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_4"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = NIC_augusto_caraval_antonio
-			allowed = {
-				original_tag = NIC
-			}
-			traits = {
-				army_chief_defensive_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -219,9 +269,12 @@ characters={
 		}
 		advisor={
 			slot = air_chief
-			idea_token = NIC_guillermo_r_cuadra
+			idea_token = NIC_guillermo_r_cuadra_chief
 			allowed = {
 				original_tag = NIC
+			}
+			available = {
+				NOT = { has_idea = NIC_guillermo_r_cuadra_high_command }
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -231,24 +284,17 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
-
-	NIC_bernardo_doroteo={
-		name="Bernardo Doroteo"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
 		advisor={
 			slot = high_command
-			idea_token = NIC_bernardo_doroteo
-			ledger = air
+			idea_token = NIC_guillermo_r_cuadra_high_command
 			allowed = {
 				original_tag = NIC
 			}
+			available = {
+				NOT = { has_idea = NIC_guillermo_r_cuadra_chief }
+			}
 			traits = {
-				air_close_air_support_2
+				air_pilot_training_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -257,48 +303,26 @@ characters={
 		}
 	}
 
-	NIC_manuel_roque_garcia={
-		name="Manuel Roque Garcia"
+	# navy chief
+	NIC_noel_esto_nino_miranda={
+		name="Noel Esto Niño Miranda"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_1"
+				small="GFX_idea_generic_navy_south_america_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = NIC_manuel_roque_garcia
-			ledger = army
+			slot = navy_chief
+			idea_token = NIC_noel_esto_nino_miranda
 			allowed = {
 				original_tag = NIC
 			}
 			traits = {
-				army_regrouping_2
+				navy_chief_reform_2
 			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
-			}
-		}
-	}
-
-	NIC_sebastian_morazan={
-		name="Sebastián Morazán"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = NIC_sebastian_morazan
-			ledger = air
-			allowed = {
-				original_tag = NIC
-			}
-			
-			traits = {
-				air_warfare_theorist
 			}
 		}
 	}
@@ -326,117 +350,186 @@ characters={
 		}
 	}
 
-	NIC_juan_pablo_esquerra	={
-		name="Juan Pablo Esquerra"
+	# army chief
+	# head of the Sandanistas after Sandino's death in '34. Assassinated in '37 as a part of the current NIC focus tree. 
+	NIC_pedro_altamirano = { 
+		name = "Pedro Altamirano"
 		portraits={
-			army={
-				small="GFX_idea_generic_navy_south_america_2"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = NIC_juan_pablo_esquerra
-			ledger = navy
-			allowed = {
-				original_tag = NIC
-			}
-			traits = {
-				navy_naval_air_defense_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	NIC_noel_esto_nino_miranda={
-		name="Noel Esto Niño Miranda"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_south_america_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = NIC_noel_esto_nino_miranda
-			allowed = {
-				original_tag = NIC
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	NIC_maximiliano_benito={
-		name="Maximiliano Benito"
-		portraits={
-			army={
+			army = {
 				small="GFX_idea_generic_army_south_america_3"
 			}
 		}
 		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = NIC_maximiliano_benito
-			ledger = army
+			slot = army_chief
+			idea_token = NIC_pedro_altamirano_chief
 			allowed = {
 				original_tag = NIC
 			}
+			available = {
+				has_government = communism
+				NOT = { has_idea = NIC_pedro_altamirano_theorist }
+				NOT = { has_country_flag = NIC_pedro_altamirano_assassination_flag }
+			}
 			traits = {
-				military_theorist
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = NIC_pedro_altamirano_theorist
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				has_government = communism
+				NOT = { has_idea = NIC_pedro_altamirano_chief }
+				NOT = { has_country_flag = NIC_pedro_altamirano_assassination_flag }
+			}
+			traits = {
+				guerilla_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+	}
+	
+
+	# high command	
+	# another one from the Sandino killing. Samuel Santos, made general sometime before '42 (when he died) and after '34. Not to be confused with a Sandanista from the 80s called Samuel Santos. 
+	NIC_samuel_santos = { 
+		name = "Samuel Santos"
+		portraits={
+			army = {
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NIC_samuel_santos
+			allowed = {
+				original_tag = NIC
+			}
+			available = {
+				NOT = { has_government = communism }
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}
 
+	# theorists
+	# no evidence he was ever the chief of army. changed to be political advisor + theorist
 	NIC_victor_roman_y_reyes={
-		name="Victor Roman y Reyes"
+		name="Víctor Román y Reyes"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_south_america_5"
 			}
 		}
 		advisor={
-			slot = army_chief
-			idea_token = NIC_victor_roman_y_reyes
+			slot = theorist
+			idea_token = NIC_victor_roman_y_reyes_theorist
 			allowed = {
 				original_tag = NIC
 			}
+			available = {
+				NOT = { has_idea = NIC_victor_roman_y_reyes_advisor }
+			}
 			traits = {
-				army_chief_offensive_2
+				military_theorist
 			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NIC_victor_roman_y_reyes_advisor
+			allowed  = {
+				original_tag  = NIC
+			}
+			available = {
+				NOT = { has_idea = NIC_victor_roman_y_reyes_theorist }
+			}
+			traits  = {
+				staunch_traditionalist 
 			}
 		}
 	}
 
-	NIC_manuel_corovel_kirsch={
-		name="Manuel Corovél Kirsch"
+	NIC_sebastian_morazan={
+		name="Sebastián Morazán"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_3"
+				small="GFX_idea_generic_air_south_america_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = NIC_manuel_corovel_kirsch
-			ledger = army
+			cost = 100
+			slot = theorist
+			idea_token = NIC_sebastian_morazan
+			ledger = air
+			allowed = {
+				original_tag = NIC
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	NIC_toribio_fermin={
+		name="Toribio Fermín"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_1"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = NIC_toribio_fermin
+			ledger = navy
 			allowed = {
 				original_tag = NIC
 			}
 			traits = {
-				army_armored_2
+				naval_theorist
 			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+		}
+	}
+	
+	# political advisors
+	NIC_luis_alberto_cabrales={ #Creator of the blue-shirts
+		name = "Luis Alberto Cabrales"
+		portraits={
+			civilian={
+				large = GFX_Portrait_South_America_Generic_land_3
+				small = GFX_Portrait_South_America_Generic_land_3_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NIC_luis_alberto_cabrales
+			allowed  = {
+				original_tag  = NIC
+			}
+			traits  = {
+				fascist_demagogue 
 			}
 		}
 	}
@@ -456,24 +549,6 @@ characters={
 			}
 			traits  = {
 				popular_figurehead 
-			}
-		}
-	}
-	NIC_leonardo_arguello_vargas={
-		name="Leonardo Argüello Vargas"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NIC_leonardo_arguello_vargas
-			allowed  = {
-				original_tag  = NIC
-			}
-			traits  = {
-				armaments_organizer 
 			}
 		}
 	}
@@ -497,6 +572,7 @@ characters={
 		}
 	}
 
+	# in exile c. 1936. should only be available to non-somoza paths. https://es.wikipedia.org/wiki/Concepci%C3%B3n_Palacios
 	NIC_concepcion_palacios={
 		name= NIC_concepcion_palacios
 		portraits={
@@ -510,6 +586,11 @@ characters={
 			idea_token = NIC_concepcion_palacios
 			allowed  = {
 				original_tag  = NIC
+			}
+			available = {
+				NOT = {
+					has_country_leader = { ruling_only = yes character = NIC_anastasio_somoza_garcía }
+				}
 			}
 			traits  = {
 				ICE_progressive_doctor
@@ -616,23 +697,6 @@ characters={
 	}
 
 
-	NIC_francisco_parajon_montealegre = { #Terrible photo, you can always trust SA for that
-		name = "Francisco Parajón Montealegre"
-		portraits={
-			army = {
-				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-			}
-		}
-		corps_commander = {
-			traits = { politically_connected trait_reckless }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 3
-		}
-	}
-
 	NIC_Francisco_Navarro={
 		name="Francisco Navarro Alvarado"
 		portraits={
@@ -702,30 +766,5 @@ characters={
 		}
 	}
 
-	NIC_jose_coronel_urtecho={
-		name="José Coronel Urtecho"
-		portraits={
-			army={
-				small=GFX_idea_generic_political_advisor_south_america_1
-			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			expire = "1965.1.1"
-			traits = { fascist_writer }
-			id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NIC_Jose_Coronel_Urtecho
-			allowed  = {
-				original_tag  = NIC
-			}
-			traits  = {
-				# placeholder
-				fascist_writer 
-			}
-		}
-	}
 
 }

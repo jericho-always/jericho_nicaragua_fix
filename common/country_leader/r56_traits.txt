@@ -650,8 +650,8 @@ leader_traits = {
 		sprite = 5
 		random = no
 		democratic_drift = -0.05
-		training_time_army_factor = -0.075
-		experience_gain_army = 0.25
+		training_time_army_factor = -0.10
+		experience_gain_army = 0.30
 
 	}	
 

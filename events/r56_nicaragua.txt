@@ -93,6 +93,9 @@
 			option = {
 				name = nicaragua.5.a
 				add_stability = 0.05
+				hidden_effect = {
+					set_country_flag = NIC_pedro_altamirano_assassination_flag
+				}
 			}
 		}
 
